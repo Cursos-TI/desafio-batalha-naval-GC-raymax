@@ -7,13 +7,13 @@ int main() {
     int tabuleiro[10][10] = {0}; // Inicializa o tabuleiro com zeros
 
     // Posiciona um navio verticalmente na coluna 2
-    for (int C = 0; C < 3; C++) {
-        tabuleiro[C][9] = 3;
+    for (int L = 0; L < 3; L++) {
+        tabuleiro[L][9] = 3;
     }
 
     // Posiciona um navio horizontalmente na linha 6 
-    for (int L = 0; L < 3; L++) {
-        tabuleiro[5][L] = 3;
+    for (int C = 0; C < 3; C++) {
+        tabuleiro[5][C] = 3;
     }
 
     // Posiciona um navio Diagonalmente 
@@ -35,10 +35,10 @@ int main() {
         }
 
     // Exibe o tabuleiro
-    for (int C = 0; C < 10; C++) {
-        printf("\n%c ", linha[C]); // Exibe a letra da linha
-        for (int L = 0; L < 10; L++) {
-            printf("%d ", tabuleiro[C][L]);
+    for (int L = 0; L < 10; L++) {
+        printf("\n%c ", linha[L]); // Exibe a letra da linha
+        for (int C = 0; C < 10; C++) {
+            printf("%d ", tabuleiro[L][C]);
         }
         
     }
