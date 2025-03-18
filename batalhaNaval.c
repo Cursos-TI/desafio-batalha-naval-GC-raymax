@@ -2,25 +2,26 @@
 
 int main() {
     // Nível Novato - Posicionamento dos Navios
-    char linha[10] = {'A','B','C','D','E','F','G','H','I','J'};
-    int coluna[10] = {'1','2','3','4','5','6','7','8','9','10'};
+    char coluna[10] = {'A','B','C','D','E','F','G','H','I','J'};
+    int linha[10] = {'1','2','3','4','5','6','7','8','9','10'};
     int tabuleiro[10][10] = {0}; // Inicializa o tabuleiro com zeros
 
     // Posiciona um navio verticalmente na coluna 2
-    for (int C = 0; C < 3; C++) {
-        tabuleiro[C][1] = 3;
+    for (int L = 0; L < 3; L++) {
+        tabuleiro[L][1] = 3;
     }
 
     // Posiciona um navio horizontalmente na linha 6 
-    for (int L = 0; L < 3; L++) {
-        tabuleiro[5][L] = 3;
+    for (int C = 0; C < 3; C++) {
+        tabuleiro[5][C] = 3;
     }
+
 
     // Exibe o tabuleiro
     printf("Tabuleiro:\n");
-    for (int C = 0; C < 10; C++) {
-        for (int L = 0; L < 10; L++) {
-            printf("%d ", tabuleiro[C][L]);
+    for (int L = 0; L < 10; L++) {
+        for (int C = 0; C < 10; C++) {
+            printf("%d ", tabuleiro[L][C]);
         }
         printf("\n");
     }
