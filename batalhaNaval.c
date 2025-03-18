@@ -1,40 +1,50 @@
 #include <stdio.h>
 
 int main() {
-    // Nível Novato - Posicionamento dos Navios
+    // nível Aventureiro
     char coluna[10] = {'A','B','C','D','E','F','G','H','I','J'};
     int linha[10] = {'1','2','3','4','5','6','7','8','9','10'};
     int tabuleiro[10][10] = {0}; // Inicializa o tabuleiro com zeros
 
     // Posiciona um navio verticalmente na coluna 2
-    for (int L = 0; L < 3; L++) {
-        tabuleiro[L][1] = 3;
+    for (int C = 0; C < 3; C++) {
+        tabuleiro[C][9] = 3;
     }
 
     // Posiciona um navio horizontalmente na linha 6 
-    for (int C = 0; C < 3; C++) {
-        tabuleiro[5][C] = 3;
+    for (int L = 0; L < 3; L++) {
+        tabuleiro[5][L] = 3;
     }
 
+    // Posiciona um navio Diagonalmente 
+    for (int D = 0; D < 3; D++){
+        tabuleiro[D][D] = 3;
+    }
+
+    // Posiciona um navio Diagonalmente
+    for (int D = 0; D < 3; D++){
+        tabuleiro[D][D + 3] = 3;
+    }
 
     // Exibe o tabuleiro
     printf("Tabuleiro:\n");
-    for (int L = 0; L < 10; L++) {
+        // Exibe a numeração das colunas
+        printf("  ");
         for (int C = 0; C < 10; C++) {
-            printf("%d ", tabuleiro[L][C]);
+            printf("%c ", coluna[C]);
         }
-        printf("\n");
-    }
 
+    // Exibe o tabuleiro
+    for (int C = 0; C < 10; C++) {
+        printf("\n%c ", linha[C]); // Exibe a letra da linha
+        for (int L = 0; L < 10; L++) {
+            printf("%d ", tabuleiro[C][L]);
+        }
+        
+    }
+    
     return 0;
 }
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
-
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
